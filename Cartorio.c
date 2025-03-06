@@ -119,28 +119,40 @@ int main ()//Função principal do programa// Essa função sempre abre primeiro
 {	
 	int opcao=0;//Definindo variáveis
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-	for(laco=1;laco=1;)//Definindo repetição
-	{//Repetição começa aqui
+	printf ("### Cartório da EBAC ###\n\n");
+	printf("Login de administrador!\n\nDigite sua senha:  ");
+	scanf("%s", senhadigitada);
 	
-	system ("cls"); //Responsavel por limpar a tela
-
-	setlocale (LC_ALL, "Portuguese");//Definindo linguagem
+	comparacao = strcmp (senhadigitada, "admin");
 	
-	printf ("### Cartório da EBAC ###\n\n");// Inicio do menu
-	printf("Escolha a opção desejada do menu:\n\n");//Opções do menu
-	printf("\t1 - Registrar nomes\n");
-	printf("\t2 - Consultar nomes\n");
-	printf("\t3 - Deletar nomes\n");
-	printf("\t4 - Sair do sistema\n\n");
-	printf("Opção:");//Fim do menu
-	
-	scanf("%d",&opcao); //Inserir opção na variável
-	
-	system("cls"); //Limpar todas as mensagens que haviam antes para melhorar aspecto visual
-	
-	switch (opcao)//Uma alternativa melhor que o "if" //Inicio da seleção do menu
+	if(comparacao == 0);
 	{
+	
+	
+	 for(laco=1;laco=1;)//Definindo repetição
+	 {//Repetição começa aqui
+	
+	  system ("cls"); //Responsavel por limpar a tela
+
+	  setlocale (LC_ALL, "Portuguese");//Definindo linguagem
+	
+	  printf ("### Cartório da EBAC ###\n\n");// Inicio do menu
+	  printf("Escolha a opção desejada do menu:\n\n");//Opções do menu
+	  printf("\t1 - Registrar nomes\n");
+	  printf("\t2 - Consultar nomes\n");
+	  printf("\t3 - Deletar nomes\n");
+	  printf("\t4 - Sair do sistema\n\n");
+	  printf("Opção:");//Fim do menu
+	
+	  scanf("%d",&opcao); //Inserir opção na variável
+	
+	  system("cls"); //Limpar todas as mensagens que haviam antes para melhorar aspecto visual
+	
+	  switch (opcao)//Uma alternativa melhor que o "if" //Inicio da seleção do menu
+  	 {
 		case 1:
 		registro();//chamada de funções
 		break;
@@ -164,11 +176,14 @@ int main ()//Função principal do programa// Essa função sempre abre primeiro
 	    break;
 		
 	
+}
 	}//Fim da seleção do menu
 	
 }
-
+else
+  printf("Senha Incorreta!");		
 }
+
 	
 
   
